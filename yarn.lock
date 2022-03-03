@@ -926,6 +926,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@klaytn/contracts@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@klaytn/contracts/-/contracts-0.9.0.tgz#6b1cb4d3695c3276c259bd83d153433d4225da6c"
+  integrity sha512-yuJEkaCfKt2Wb17tyeaDKCB7KjHSp6tOOHp/x6Cbck1uiqpIu02pKH7qq+zFrKJ6c9cn0J0G9bXjfcjXH4ZEHg==
+
 "@metamask/eth-sig-util@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@metamask/eth-sig-util/-/eth-sig-util-4.0.0.tgz#11553ba06de0d1352332c1bde28c8edd00e0dcf6"

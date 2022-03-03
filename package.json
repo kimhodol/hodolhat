@@ -3,6 +3,7 @@
   "description": "Hardhat template configured with Klaytn network",
   "license": "MIT",
   "devDependencies": {
+    "@klaytn/contracts": "^0.9.0",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
