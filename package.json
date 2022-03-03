@@ -1,5 +1,8 @@
 {
   "name": "hodolhat",
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "version": "0.0.1",
   "description": "Hardhat template configured with Klaytn network",
   "homepage": "https://github.com/kimhodol/hodolhat",
@@ -49,6 +52,12 @@
     "deploy:cypress": "hardhat --network cypress deploy",
     "test": "hardhat test",
     "lint": "eslint . --fix",
-    "lint:sol": "solhint 'src/**/*.sol' --fix"
+    "lint:sol": "solhint 'src/**/*.sol' --fix",
+    "postinstall": "yarn compile",
+    "pretest": "yarn compile"
+  },
+  "resolutions": {
+    "@ethersproject/abi": "5.1.0",
+    "@ethersproject/contracts": "5.1.0"
   }
 }

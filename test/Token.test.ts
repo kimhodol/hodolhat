@@ -6,6 +6,7 @@ import {
   getNamedAccounts,
   getUnnamedAccounts,
 } from 'hardhat';
+import { Token } from '../typechain';
 import { expect } from './chai-setup';
 
 // we import our utilities
@@ -17,7 +18,7 @@ async function setup() {
   await deployments.fixture(['Token']);
 
   // we get an instantiated contract in the form of a ethers.js Contract instance:
-  const contracts = {
+  const contracts: { Token: Token } = {
     Token: await ethers.getContract('Token'),
   };
 
@@ -105,7 +106,9 @@ describe('Token contract', function () {
 
     it('Should update balances after transfers', async function () {
       const { Token, users, tokenOwner } = await setup();
-      const initialOwnerBalance = await Token.balanceOf(tokenOwner.address);
+      const initialOwnerBalance = (
+        await Token.balanceOf(tokenOwner.address)
+      ).toNumber();
 
       // Transfer 100 tokens from owner to users[0].
       await tokenOwner.Token.transfer(users[0].address, 100);

@@ -19,7 +19,6 @@ export async function setupUser<T extends { [contractName: string]: Contract }>(
   const user: any = { address };
   for (const key of Object.keys(contracts)) {
     const signer: SignerWithAddress = await ethers.getSigner(address);
-    // @ts-ignore
     user[key] = contracts[key].connect(signer);
   }
   return user as { address: string } & T;
