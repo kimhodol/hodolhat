@@ -1,6 +1,10 @@
 {
   "name": "hodolhat",
+  "version": "0.0.1",
   "description": "Hardhat template configured with Klaytn network",
+  "homepage": "https://github.com/kimhodol/hodolhat",
+  "repository": "github:kimhodol/hodolhat",
+  "author": "Woonjang Ahn <hodol@syllabs.io> (https://hodol.dev)",
   "license": "MIT",
   "devDependencies": {
     "@klaytn/contracts": "^0.9.0",
@@ -37,6 +41,7 @@
     "typescript": "^4.6.2"
   },
   "scripts": {
+    "clean": "hardhat clean",
     "compile": "hardhat compile",
     "run:node": "hardhat node",
     "deploy": "hardhat --network localhost deploy",
