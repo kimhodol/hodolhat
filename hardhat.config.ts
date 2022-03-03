@@ -25,7 +25,7 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: '0.5.8',
   networks: {
-    mainnet: {
+    cypress: {
       url: 'https://node-api.klaytnapi.com/v1/klaytn',
       httpHeaders: {
         'x-chain-id': '8217',
@@ -40,13 +40,12 @@ const config: HardhatUserConfig = {
       url: 'https://api.baobab.klaytn.net:8651',
       chainId: 1001,
       gas: 20000000,
-      gasPrice: 25000000000,
       accounts: [process.env.PRIVATE_KEY || ''],
     },
   },
   namedAccounts: {
     deployer: 0,
-    tokenOwner: 1,
+    tokenOwner: 0,
   },
   paths: {
     sources: 'src',

@@ -1,3 +1,4 @@
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 import { Contract } from 'ethers';
 import { ethers } from 'hardhat';
 
@@ -15,10 +16,11 @@ export async function setupUser<T extends { [contractName: string]: Contract }>(
   address: string,
   contracts: T,
 ): Promise<{ address: string } & T> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const user: any = { address };
   for (const key of Object.keys(contracts)) {
-    user[key] = contracts[key].connect(await ethers.getSigner(address));
+    const signer: SignerWithAddress = await ethers.getSigner(address);
+    // @ts-ignore
+    user[key] = contracts[key].connect(signer);
   }
   return user as { address: string } & T;
 }
