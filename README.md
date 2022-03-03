@@ -22,5 +22,5 @@ yarn test
 yarn lint
 yarn lint:sol
 yarn hardhat accounts
-yarn hardhat run scripts/deploy.ts
+yarn hardhat run scripts/tutorial.ts
 ```
