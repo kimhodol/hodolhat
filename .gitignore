@@ -9,3 +9,5 @@ cache
 artifacts
 
 .idea
+
+*.log
